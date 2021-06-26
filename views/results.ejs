@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Show data</title>
+</head>
+
+<body>
+    <div class="table-data">
+        <h2 style="text-align: center;">Display Data using Node.js & MongoDB</h2>
+        <hr>
+        <div class="center">
+            <style>
+                .center{
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+            </style>
+        <table border="1">
+            <tr>
+                <th>S.No</th>
+                <th>Device Id</th>
+                <th>Battery Volts</th>
+                <th>SolarVolt</th>
+
+            </tr>
+
+            <% if(deviceList.length!=0){ var i=1; deviceList.forEach(function(data,id){ if(deviceList==deviceList)%>
+                <tr>
+                    <td>
+                        <%=id %>
+                    </td>
+                    <td>
+                        <%=data.deviceid %>
+                    </td>
+                    <td>
+                        <%=data.batteryvolt %>
+                    </td>
+                    <td>
+                        <%=data.solarvolt %>
+                    </td>
+                </tr>
+                <% i++; }) %>
+                    <% } else{ %>
+                        <tr>
+                            <td colspan="7">No Data Found</td>
+                        </tr>
+                        <% } %>
+        </table>
+    </div><br><br>
+    <button  ><a href="/">Back to home</a></button>
+    </div>
+</body>
+
+</html>
